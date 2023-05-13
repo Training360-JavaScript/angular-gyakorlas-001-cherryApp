@@ -4,21 +4,10 @@
   <h5 class="my-0 mr-md-auto font-weight-normal"></h5>
   <nav class="my-2 my-md-0 mr-md-3">
     <a
+      *ngFor="let item of menuItems | sort:'order':1"
       class="p-2 text-dark"
-      [href]="menuItems[2].link"
-    >{{ menuItems[2].title }}</a>
-    <a
-      class="p-2 text-dark"
-      [href]=""
-    ></a>
-    <a
-      class="p-2 text-dark"
-      [href]=""
-    ></a>
-    <a
-      class="p-2 text-dark"
-      [href]=""
-    ></a>
+      [href]="item.link"
+    >{{ item.title }}</a>
   </nav>
   <a
     class="btn btn-outline-primary"
